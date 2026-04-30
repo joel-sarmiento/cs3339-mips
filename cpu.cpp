@@ -327,7 +327,4 @@ void stepCycle(bool debug) {
     exmem = next_exmem;
     memwb = next_memwb;
 
-    if(debug) {
-        cout << "PC: " << PC << "\n";
-    }
 }
