@@ -24,4 +24,9 @@ Use the `-d` flag to show the additional pipeline state information each cycle
 ```
 ./mips_sim prog.asm -d
 ```
-This prints the cycle number, PC value, instruction movement through stages, branch decisions, and ALU and memory operations.
+This prints the cycle number, PC value, instruction movement through stages, branch decisions, ALU and memory operations, all registers, and first 32 words of memory.
+
+If debug output does not fit in terminal, redirect to a .txt file to view all output:
+```
+./mips_sim prog.asm -d > debug_output.txt
+```
