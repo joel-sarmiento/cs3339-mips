@@ -50,6 +50,22 @@ int main(int argc, char *argv[])
             bool Jump = (op == J);
 
             cout << "Control: RegWrite=" << RegWrite << " MemRead=" << MemRead << " MemWrite=" << MemWrite << " Branch=" << Branch << " Jump=" << Jump << "\n\n";
+
+            // added registers display for each cycle
+            cout << "Registers:\n";
+            for (int i = 0; i < NUM_REGS; i++)
+            {
+                cout << "R[" << i << "] = " << R[i] << "\n";
+            }
+            cout << "\n";
+
+            // added first 32 words of memory
+            cout << "Memory (first 32 words):\n";
+            for (int i = 0; i < 32; ++i)
+            {
+                cout << "MEM[" << i << "] = " << MEM[i] << "\n";
+            }
+            cout << "\n";
         }
         stepCycle(debug);
         cycle++;
